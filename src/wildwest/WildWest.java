@@ -253,7 +253,15 @@ public class WildWest {
                 + "to the point where you start sweating. Eventually the guards stop at the mouth of a quiet \n"
                 + "tunnel and push you down it, but do not follow.");
         try {
-            String myFile = "ko.wav";
+                    File PICCY = new File("mine.jpg");
+                    Desktop dt = Desktop.getDesktop();
+                    dt.open(PICCY);
+                    System.out.println("Done.");
+                } catch (Exception e) {
+                    e.printStackTrace();
+            }
+        try {
+            String myFile = "mining.wav";
             InputStream in = new FileInputStream(myFile);
             AudioStream audioStream = new AudioStream(in);
             AudioPlayer.player.start(audioStream);
@@ -262,7 +270,7 @@ public class WildWest {
         }
         
         if (strength==1){
-            System.out.println("A gruff man meets, covered in coal with a thick, unkempt beard"
+            System.out.println("A gruff man meets you, covered in coal with a thick, unkempt beard"
                     + "\n"
                     + "'They caught a new one eh? And Mike's hardly even in the ground, bastards. \n"
                     + "Well, lucky for you, and you better not tell the guards this, or I'll gut ya \n"
@@ -281,14 +289,14 @@ public class WildWest {
         }
         if (intelligence==1) {
             try {
-                String myFile = "freedom.wav";
+                String myFile = "creak.wav";
                 InputStream in = new FileInputStream(myFile);
                 AudioStream audioStream = new AudioStream(in);
                 AudioPlayer.player.start(audioStream);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            System.out.println("You walk down the seemingly endless shaft until you \n"
+            System.out.println("You walk down the short mine shaft until you \n"
                     + "get to a make-shift doorway, crudely rigged together to roughly\n"
                     + "block off the end of the tunnel from the rest of it. As you \n"
                     + "gingerly open it, you find a withered old man under a blanket \n"
